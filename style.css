@@ -95,8 +95,12 @@
     font-size:17px;
     line-height:1.5;
     font-style:italic;
-    color:var(--olive-dark);
+    color:#B8643B;
     text-align:center;
+  }
+
+  #albumTitle{
+    text-transform:none;
   }
 
   #rsvp-response-yes + span,
