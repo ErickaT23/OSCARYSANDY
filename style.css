@@ -1496,7 +1496,7 @@ a{
     font-family:var(--cursive);
     font-style:normal;
     font-size:18px;
-    color:var(--olive-dark);
+    color:#9C3207;
     text-align:center;
   }
   .rsvp-form input[type="text"],
@@ -1530,6 +1530,10 @@ a{
     box-shadow:none;
     font-family:var(--cursive);
     font-size:28px;
+    background:var(--gold-highlight);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
     font-style:normal;
     background:var(--gold-text);
     -webkit-background-clip:text;
