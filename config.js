@@ -30,7 +30,7 @@ const config = {
     descripcion: "Te invitamos a compartir con nosotros este día tan especial el 14 de noviembre de 2026 en Managua.",
     autor: "Two Design",
     keywords: "invitacion de boda, Carlos Andrés, Sandy, boda, Managua, discurso biblico, Hotel Contempo",
-    ogImage: "https://i.ibb.co/FFLwB4G/MTERRACOTA.png"
+    ogImage: "Images/E2.png"
   },
   pareja: {
     nombres: "Carlos Andrés & Sandy",

@@ -1,8 +1,8 @@
   :root{
     --bg: #f4eee7;
     --ink: #9c3207;
-    --olive: #bf9469;
-    --olive-dark: #9c3207;
+    --olive: #808000;
+    --olive-dark: #808000;
     --olive-soft: rgba(191,148,105,.14);
     --blush: #d9c6b3;
     --sand: #e2d3c5;
@@ -10,6 +10,7 @@
     --card: rgba(244,238,231,.84);
     --rose-gold-text: linear-gradient(120deg, #7b351d 0%, #a6532e 24%, #d08a62 50%, #a6532e 76%, #6f2c19 100%);
     --gold-text: linear-gradient(135deg, #713018 0%, #984326 18%, #bb6038 38%, #d4875d 52%, #a84c2b 68%, #81351e 84%, #5e2717 100%);
+    --gold-highlight: linear-gradient(120deg, #76552a 0%, #a8793c 28%, #c9a15f 50%, #a8793c 72%, #6d4c25 100%);
     --black-gloss-text: #9c3207;
     --gradient-accent: linear-gradient(120deg, #6f2608 0%, #9c3207 22%, #c65b25 48%, #df8a50 72%, #bf9469 100%);
 
@@ -42,8 +43,90 @@
   .album-editorial h3{font-family:var(--title);text-transform:uppercase;letter-spacing:.12em}
   .album-editorial p{margin:0 auto 18px}
   .album-qr{display:block;width:180px;height:180px;margin:0 auto 18px}
+
+  #ceremonyTitle,
+  #receptionTitle,
+  #itineraryTitle,
+  #dressCodeTitle,
+  #giftTitle,
+  #playlistTitle,
+  #albumTitle,
+  #wishesTitle,
+  #rsvpTitle{
+    background:var(--gold-highlight);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+
+  #ceremonyLocation,
+  #receptionLocation{
+    font-family:var(--text);
+    font-size:13px;
+    line-height:1.5;
+  }
+
+  #receptionPlace{
+    font-family:var(--title);
+    background:var(--gold-highlight);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+
+  .event-map-link{
+    background:url("Images/textura-2.png") center/cover no-repeat;
+    border-color:var(--olive-dark) !important;
+    color:var(--olive-dark) !important;
+  }
+
+  #rsvp-name{
+    font-family:var(--text);
+    font-size:17px;
+    font-style:italic;
+    color:var(--olive-dark);
+  }
+
+  #wishesIntro,
+  #albumSection .wishes-intro{
+    max-width:560px;
+    margin:0 auto;
+    font-family:var(--text);
+    font-size:17px;
+    line-height:1.5;
+    font-style:italic;
+    color:var(--olive-dark);
+    text-align:center;
+  }
+
+  #rsvp-response-yes + span,
+  #rsvp-response-no + span,
+  #btnConfirmarRsvp{
+    background:url("Images/textura-2.png") center/cover no-repeat !important;
+    border-color:var(--olive) !important;
+    color:var(--olive) !important;
+  }
+
+  .event-note-icon,
+  .timeline-icon{
+    filter: brightness(0) saturate(100%) invert(45%) sepia(11%) saturate(500%) hue-rotate(55deg) brightness(88%) contrast(82%);
+  }
+
+  .playlist-icon{
+    margin:0 0 10px;
+    color:var(--olive-dark);
+    font-size:24px;
+  }
+
+  .playlist-button{
+    margin-top:18px;
+  }
   
   *{box-sizing:border-box}
+  html,
+  body{
+    overflow-x:hidden;
+  }
   body{
     margin:0;
     background:transparent;
@@ -108,7 +191,7 @@
     font-family: var(--cursive);
     letter-spacing:.02em;
     text-transform:none;
-    background:var(--rose-gold-text);
+     background:var(--gold-highlight);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
@@ -116,7 +199,7 @@
 
   .tag-animated{
     background-size:200% auto;
-    animation: goldShimmer 5s ease-in-out infinite;
+    animation:none;
   }
 
   .envelope-wrap{display:flex;justify-content:center;width:100%}
@@ -177,7 +260,10 @@
     margin-bottom:2px;
     font-family: var(--cursive);
     font-size: 24px;
-    color:var(--olive-dark);
+     background:var(--gold-highlight);
+     -webkit-background-clip:text;
+     -webkit-text-fill-color:transparent;
+     background-clip:text;
   }
   
   .guest-sub{
@@ -192,7 +278,10 @@
   .guest-seats{
     margin-top:4px;
     font-size:12px;
-    color:var(--olive-dark);
+     background:var(--gold-highlight);
+     -webkit-background-clip:text;
+     -webkit-text-fill-color:transparent;
+     background-clip:text;
     font-family: var(--text);
     font-size: 16px;
     font-style: italic;
@@ -488,7 +577,10 @@ a{
     font-family:var(--title);
     font-size:clamp(34px, 7vw, 58px);
     line-height:1;
-     color:#B8643B;
+      background:var(--gold-highlight);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
   }
   .countdown-simple-label{
     margin-top:8px;
@@ -496,7 +588,10 @@ a{
     font-size:11px;
     letter-spacing:.16em;
     text-transform:uppercase;
-     color:#B8643B;
+      background:var(--gold-highlight);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
   }
   .countdown-date{
     margin:0;
@@ -621,10 +716,10 @@ a{
   }
   .countdown .btn-outline,
   .countdown a.btn-outline{
-    background:transparent;
-     border-color:#B8643B;
-     color:#B8643B;
-    box-shadow:0 8px 18px rgba(129,52,30,.12);
+    background: transparent;
+    border-color: olive;
+    color: olive;
+    box-shadow: 0 8px 18px rgba(129, 52, 30, .12);
   }
   .countdown .btn-outline:hover,
   .countdown a.btn-outline:hover{
@@ -780,7 +875,7 @@ a{
     width:7px;
     height:7px;
     border-radius:50%;
-     background:#B8643B;
+     background-color:#b8643b8a !important;
     transform:translateX(-50%);
     z-index:2;
   }
@@ -1073,7 +1168,7 @@ a{
     font-size: 19px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
-     background: var(--gold-text);
+     background: var(--gold-highlight);
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      background-clip: text;
@@ -1245,7 +1340,6 @@ a{
     font-size:10px;
     font-family: var(--title);
     transition: .22s ease;
-    background: linear-gradient(135deg, rgba(255,248,245,.98) 0%, rgba(244,219,206,.92) 60%, rgba(229,190,170,.82) 100%);
     box-shadow: 0 4px 10px rgba(111,61,43,.05);
     border-radius: 999px;
     text-align:center;
@@ -1629,14 +1723,15 @@ a{
       justify-content:center;
       align-self:center;
       justify-self:center;
-      margin-top:-55px;
-      padding:18px 0 0;
+      margin-top:-52px;
+      padding:3px 0 0;
+      left:70px;
     }
     .reception-cala{
-      left:40px;
-      bottom:210px;
-      top:-180px;
-      width:130px;
+      left:90px;
+      bottom:211px;
+      top:-219px;
+      width:188px;
     }
     .reception-oval{
       width:min(100%, 200px);
@@ -1644,7 +1739,7 @@ a{
       padding:32px 16px 24px;
     }
     .reception-oval .event-note-place{
-      font-size:20px;
+      font-size:15px;
     }
     .reception-oval .event-note-location,
     .reception-oval .event-note-time{
@@ -1732,6 +1827,17 @@ a{
     .rsvp-response-group{
       grid-template-columns:1fr;
     }
+  }
+
+  .event-map-link,
+  .event-map-link:hover,
+  .event-map-link:focus-visible{
+    background-image:url("Images/textura-2.png") !important;
+    background-color:transparent !important;
+    background-size:cover !important;
+    background-position:center !important;
+    border:1px solid var(--olive-dark) !important;
+    color:var(--olive-dark) !important;
   }
   @media (max-width: 390px){
     .hero-artwork{
@@ -1917,6 +2023,32 @@ a{
     background: var(--olive);
     color: #fff;
     border-color: var(--olive);
+  }
+
+  #ceremonyMapLink,
+  #receptionMapLink,
+  .playlist-button,
+  #albumSection > .btn-outline,
+  .wishes-actions .btn-outline,
+  .wish-form .btn-outline,
+  .rsvp-radio-option span,
+  #btnConfirmarRsvp{
+    font-family: var(--title) !important;
+    color: var(--olive) !important;
+    border-color: var(--olive) !important;
+  }
+
+  #ceremonyMapLink:hover,
+  #receptionMapLink:hover,
+  .playlist-button:hover,
+  #albumSection > .btn-outline:hover,
+  .wishes-actions .btn-outline:hover,
+  .wish-form .btn-outline:hover,
+  .rsvp-radio-option input:checked + span,
+  #btnConfirmarRsvp:hover{
+    background: var(--olive) !important;
+    color: #fff !important;
+    border-color: var(--olive) !important;
   }
 
 /*ANIMACIONES*/
