@@ -2,21 +2,21 @@
   --bg: #f4eee7;
   --paper: rgba(255, 255, 255, 0.92);
   --paper-strong: #ffffff;
-  --blue: #808000;
-  --blue-soft: #9c3207;
+  --blue: #9c3207;
+  --blue-soft: #b8643b;
   --navy: #3d4039;
   --gold: #b8643b;
   --gold-soft: #d6b27a;
-  --line: rgba(128, 128, 0, 0.18);
-  --line-strong: rgba(128, 128, 0, 0.32);
+  --line: rgba(156, 50, 7, 0.18);
+  --line-strong: rgba(156, 50, 7, 0.32);
   --shadow: 0 18px 40px rgba(61, 64, 57, 0.1);
   --shadow-soft: 0 10px 24px rgba(61, 64, 57, 0.08);
   --ok-bg: rgba(184, 100, 59, 0.12);
   --ok-text: #9c3207;
   --no-bg: rgba(156, 50, 7, 0.1);
   --no-text: #9c3207;
-  --pending-bg: rgba(128, 128, 0, 0.08);
-  --pending-text: #808000;
+  --pending-bg: rgba(156, 50, 7, 0.08);
+  --pending-text: #9c3207;
 }
 
 * { box-sizing: border-box; }
@@ -28,7 +28,7 @@ body {
   color: var(--navy);
   background:
     radial-gradient(circle at top left, rgba(184, 100, 59, 0.16), transparent 32%),
-    radial-gradient(circle at right top, rgba(128, 128, 0, 0.1), transparent 26%),
+    radial-gradient(circle at right top, rgba(156, 50, 7, 0.1), transparent 26%),
     linear-gradient(180deg, #fbfaf7 0%, var(--bg) 100%);
 }
 
@@ -68,7 +68,7 @@ body {
   font-size: clamp(3.4rem, 7vw, 5.4rem);
   font-weight: 400;
   line-height: 0.92;
-  background: linear-gradient(120deg, #76552a 0%, #c9a15f 50%, #808000 100%);
+  background: linear-gradient(120deg, #76552a 0%, #c9a15f 50%, #9c3207 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -104,7 +104,7 @@ body {
 }
 
 .summary-card-highlight {
-  background: linear-gradient(145deg, var(--blue) 0%, #355a96 100%);
+  background: linear-gradient(145deg, var(--blue) 0%, #b8643b 100%);
 }
 
 .summary-label {
