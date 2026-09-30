@@ -185,9 +185,9 @@ function renderInvitationContent() {
   setLink("#footerFacebook", cfg.footer?.facebookUrl);
   setLink("#footerInstagram", cfg.footer?.instagramUrl);
   setImage("#heroMainImage", galeria.portadaPrincipal || "Images/E2.png", pareja.nombres || "Invitación");
-  setImage("#storySepImg", galeria.historia?.[0] || "Images/S1.png", "Galería de la pareja");
-  setImage("#celebrationSepImg", galeria.celebracion?.[0] || "Images/C1.png", "Galería de celebración");
-  setImage("#rotatingSepImg", galeria.pareja?.[0] || "Images/F1.png", "Foto pareja");
+  setImage("#storySepImg", galeria.historia?.[0] || "Images/FS1.jpeg", "Galería de la pareja");
+  setImage("#celebrationSepImg", galeria.celebracion?.[0] || "Images/FS2.jpeg", "Galería de celebración");
+  setImage("#rotatingSepImg", galeria.pareja?.[0] || "Images/FS3.jpeg", "Foto pareja");
 
   const adultsSection = $$("#adultsOnlySection");
   if (adultsSection && adultos.mostrar === false) {
@@ -246,9 +246,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initCountdown(countdownDate.year, countdownDate.month, countdownDate.day, countdownDate.hours, countdownDate.minutes, countdownDate.seconds);
 
   // 6) Separadores rotativos
-  initRotatingSep("rotatingSepImg", getInvitationConfig()?.galeria?.pareja || ["Images/F1.png", "Images/F2.png"]);
-  initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/C1.png", "Images/C2.png"]);
-  initRotatingSep("storySepImg", getInvitationConfig()?.galeria?.historia || ["Images/S1.png", "Images/S2.png"]);
+  initRotatingSep("rotatingSepImg", getInvitationConfig()?.galeria?.pareja || ["Images/FS3.jpeg", "Images/FS4.jpeg"]);
+  initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FS2.jpeg", "Images/FS4.jpeg"]);
+  initRotatingSep("storySepImg", getInvitationConfig()?.galeria?.historia || ["Images/FS1.jpeg"]);
 });
 
 /* ===================== INVITADO EN PORTADA ===================== */

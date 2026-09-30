@@ -30,7 +30,7 @@ const config = {
     descripcion: "Te invitamos a compartir con nosotros este día tan especial el 14 de noviembre de 2026 en Managua.",
     autor: "Two Design",
     keywords: "invitacion de boda, Carlos Andrés, Sandy, boda, Managua, discurso biblico, Hotel Contempo",
-    ogImage: "Images/E2.png"
+    ogImage: "https://images.pexels.com/photos/39931209/pexels-photo-39931209.jpeg"
   },
   pareja: {
     nombres: "Carlos Andrés & Sandy",
@@ -47,7 +47,7 @@ const config = {
     padresNoviaTitulo: "Padres de la Novia",
     padresNovia: "Edgar Giovanni Pérez & Sandra de Pérez",
     padresNovioTitulo: "Padres del Novio",
-    padresNovio: "Jaime Osorio & Priscila de Osorio"
+    padresNovio: "José Andrés Lorenzana Argueta y Patricia Osorio"
   },
   musica: {
     titulo: "Nuestra Canción",
@@ -112,7 +112,7 @@ const config = {
   },
   deseos: {
     titulo: "Buenos deseos",
-    intro: "Déjanos un mensaje especial para este día tan importante."
+    intro: "Déjanos un mensaje especia para los novios, en este día tan especial."
   },
   adultos: {
     titulo: "Solo adultos",
@@ -125,9 +125,9 @@ const config = {
   },
   galeria: {
     portadaPrincipal: "Images/E2.png",
-    historia: ["Images/S1.png", "Images/S2.png"],
-    celebracion: ["Images/C1.png", "Images/C2.png"],
-    pareja: ["Images/F1.png", "Images/F2.png"]
+    historia: ["Images/FS1.jpeg"],
+    celebracion: ["Images/FS2.jpeg", "Images/FS4.jpeg"],
+    pareja: ["Images/FS3.jpeg", "Images/FS4.jpeg"]
   },
   footer: {
     hashtag: "#CarlosAndresYSandy",
