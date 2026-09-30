@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 6) Separadores rotativos
   initRotatingSep("rotatingSepImg", getInvitationConfig()?.galeria?.pareja || ["Images/FS3.jpeg", "Images/FS4.jpeg"]);
-  initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FS2.jpeg", "Images/FS4.jpeg"]);
+  initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FS2.jpeg", "Images/FS5.jpeg"]);
   initRotatingSep("storySepImg", getInvitationConfig()?.galeria?.historia || ["Images/FS1.jpeg"]);
 });
 
@@ -435,29 +435,29 @@ function initCountdown(year, month, day, hours = 0, minutes = 0, seconds = 0) {
 /* ===================== SEPARADOR ROTATIVO ===================== */
 function initRotatingSep(imageId, images){
   const imgEl = document.getElementById(imageId);
-  if(!imgEl || !images || images.length === 0) return;
+  if(!imgEl || !images || images.length < 2) return;
 
   let currentIndex = 0;
+  const overlay = imgEl.cloneNode(false);
+  overlay.classList.add("rotating-sep-overlay");
+  overlay.setAttribute("aria-hidden", "true");
+  overlay.style.opacity = 0;
+  imgEl.parentElement.appendChild(overlay);
 
   function changeImage(){
+    currentIndex = (currentIndex + 1) % images.length;
+    const nextImage = new Image();
 
-    imgEl.style.opacity = 0;
-
-    setTimeout(() => {
-
-      currentIndex = (currentIndex + 1) % images.length;
-      imgEl.onload = () => {
-        imgEl.style.opacity = 1;
-      };
-
-      imgEl.src = images[currentIndex];
-
-      // Si la imagen ya estaba en caché, garantizamos recuperar la opacidad.
+    nextImage.onload = () => {
+      overlay.src = nextImage.src;
+      overlay.style.opacity = 1;
       setTimeout(() => {
-        imgEl.style.opacity = 1;
-      }, 120);
+        imgEl.src = nextImage.src;
+        overlay.style.opacity = 0;
+      }, 1200);
+    };
 
-    }, 400);
+    nextImage.src = images[currentIndex];
 
   }
 

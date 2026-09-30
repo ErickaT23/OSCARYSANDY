@@ -126,7 +126,7 @@ const config = {
   galeria: {
     portadaPrincipal: "Images/E2.png",
     historia: ["Images/FS1.jpeg"],
-    celebracion: ["Images/FS2.jpeg", "Images/FS4.jpeg"],
+    celebracion: ["Images/FS2.jpeg", "Images/FS5.jpeg"],
     pareja: ["Images/FS3.jpeg", "Images/FS4.jpeg"]
   },
   footer: {

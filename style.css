@@ -1882,8 +1882,16 @@ a{
     height: 100%;
     object-fit: cover;          /* ✅ full-bleed para slideshow */
     object-position: center;
-    transition: opacity .6s ease;
-  }
+     transition: opacity 1.2s ease;
+   }
+
+   .full-sep-rotating > .rotating-sep-overlay{
+     position: absolute;
+     inset: 0;
+     z-index: 1;
+     opacity: 0;
+     transition: opacity 1.2s ease;
+   }
   .dress{
     background-color: #fff;
     padding:16px;
