@@ -956,7 +956,28 @@ a{
     font-size:17px;
     line-height:1.5;
      color:#B8643B;
-    font-style:italic;
+     font-style:italic;
+  }
+  .dress-editorial-text{
+    white-space:pre-line;
+  }
+  .dress-editorial-palette{
+    margin:10px 0 0;
+    color:#B8643B;
+    font-family:var(--title);
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+  }
+  .dress-image-section{
+    padding:30px 20px;
+    text-align:center;
+  }
+  .dress-code-image{
+    display:block;
+    width:min(100%, 700px);
+    height:auto;
+    margin:0 auto;
   }
   .dress-editorial-swatches{
     margin-top:18px;

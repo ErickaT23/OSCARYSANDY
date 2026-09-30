@@ -65,7 +65,7 @@ const config = {
     recepcion: {
       titulo: "Recepción",
       lugar: "Hotel Contempo, Salón Mayagna",
-      hora: "4:00 PM",
+      hora: "6:00 pm",
       direccion: "Km 11 de la Carretera a Masaya, entrada a Casa España, 400 metros al oeste, en el área de Residencial Las Praderas, Managua",
       ubicacionUrl: "https://maps.app.goo.gl/rr8NYm62CByz7ccT8"
     },
@@ -77,8 +77,8 @@ const config = {
   itinerario: {
     titulo: "Itinerario",
     items: [
-      { icono: "Images/ICONO-1.png", alt: "Ceremonia", hora: "4:00 PM", texto: "Ceremonia" },
-      { icono: "Images/ICONO-2.png", alt: "Ingreso de los esposos", hora: "6:00 PM", texto: "Ingreso de los esposos a la recepción" },
+      { icono: "Images/ICONO-1.png", alt: "Ceremonia", hora: "3:00 pm", texto: "Discurso Bíblico" },
+      { icono: "Images/ICONO-2.png", alt: "Bienvenida", hora: "6:00 pm", texto: "Bienvenida" },
       { icono: "Images/ICONO-3.png", alt: "Brindis", hora: "6:30 PM", texto: "Brindis" },
       { icono: "Images/ICONO-4.png", alt: "Servicio de cena", hora: "7:00 PM", texto: "Servicio de cena" },
       { icono: "Images/ICONO-5.png", alt: "Inicio de la fiesta", hora: "8:00 PM", texto: "Inicio de la fiesta" },
@@ -88,11 +88,14 @@ const config = {
   dressCode: {
     titulo: "Dress Code",
     subtitulo: "Traje formal y de gala",
-    descripcion: "Vestimenta formal de gala. Agradecemos vestir elegante para acompañarnos en esta celebración tan especial.",
+    descripcion: "Querida familia y seres queridos,\nNos hará muy felices que nos acompañen en este día tan especial.\nQueremos que se sientan cómodos y elijan el color que más les favorezca. Para mantener la armonía de nuestra boda, les pedimos amablemente evitar:\n• Blanco, ivory o tonos muy similares (reservados para la novia).\n• Terracota, óxido o tonos muy similares (reservados para las damas).\n• Negro como color predominante, si es posible.\n• Colores neón o demasiado llamativos (fucsia intenso, verde limón, naranja brillante, amarillo neón, etc.).\n• Si es posible, evitar trajes verde bosque muy similares al del novio.\n¡Gracias por ser parte de este día tan especial!",
     coloresReservados: [
       { nombre: "Blanco", color: "#FFFFFF" },
       { nombre: "Cobre", color: "#B8643B" },
-      { nombre: "Terracota", color: "#9C3207" }
+      { nombre: "Terracota", color: "#9C3207" },
+      { nombre: "Negro", color: "#000000" },
+      { nombre: "Neón", color: "#39FF14" },
+      { nombre: "Verde bosque", color: "#1B4332" }
     ]
   },
   regalo: {
