@@ -143,15 +143,6 @@ function renderInvitationContent() {
 
   setText("#coverTag", pareja.portadaEtiqueta || "Nos casamos");
   setHtml("#coverCouple", escapeHtml(pareja.nombres || "Nuestra celebración").replace("&amp;", '<span class="amp">&</span>'));
-  setText("#heroBrideName", pareja.novia || "Novia");
-  setText("#heroGroomName", pareja.novio || "Novio");
-  setText("#marriageNoteText", ceremonia.mensaje);
-  setText("#brideParentsTitle", ceremonia.padresNoviaTitulo);
-  setText("#brideParentsNames", ceremonia.padresNovia);
-  setText("#groomParentsTitle", ceremonia.padresNovioTitulo);
-  setText("#groomParentsNames", ceremonia.padresNovio);
-  setText("#dateHighlightLabel", cfg.textos?.fechaLabel || "Nuestro gran día");
-  setText("#dateHighlightValue", pareja.fechaDestacada || pareja.fechaVisible || "00 . 00 . 0000");
   setLink("#calendarBtn", buildCalendarUrl());
   setText("#ceremonyTitle", evento.ceremonia?.titulo);
   setText("#ceremonyPlace", evento.ceremonia?.lugar);
@@ -185,7 +176,6 @@ function renderInvitationContent() {
   setLink("#footerFacebook", cfg.footer?.facebookUrl);
   setLink("#footerInstagram", cfg.footer?.instagramUrl);
   setImage("#heroMainImage", galeria.portadaPrincipal || "Images/E2.png", pareja.nombres || "Invitación");
-  setImage("#storySepImg", galeria.historia?.[0] || "Images/FS1.jpeg", "Galería de la pareja");
   setImage("#celebrationSepImg", galeria.celebracion?.[0] || "Images/FS2.jpeg", "Galería de celebración");
   setImage("#rotatingSepImg", galeria.pareja?.[0] || "Images/FS3.jpeg", "Foto pareja");
 
@@ -248,7 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // 6) Separadores rotativos
   initRotatingSep("rotatingSepImg", getInvitationConfig()?.galeria?.pareja || ["Images/FS3.jpeg", "Images/FS4.jpeg"]);
   initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FS2.jpeg", "Images/FS5.jpeg"]);
-  initRotatingSep("storySepImg", getInvitationConfig()?.galeria?.historia || ["Images/FS1.jpeg"]);
 });
 
 /* ===================== INVITADO EN PORTADA ===================== */

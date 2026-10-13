@@ -77,12 +77,14 @@ const config = {
   itinerario: {
     titulo: "Itinerario",
     items: [
-      { icono: "Images/ICONO-1.png", alt: "Ceremonia", hora: "3:00 pm", texto: "Discurso Bíblico" },
-      { icono: "Images/ICONO-2.png", alt: "Bienvenida", hora: "6:00 pm", texto: "Bienvenida" },
-      { icono: "Images/ICONO-3.png", alt: "Brindis", hora: "6:30 PM", texto: "Brindis" },
-      { icono: "Images/ICONO-4.png", alt: "Servicio de cena", hora: "7:00 PM", texto: "Servicio de cena" },
-      { icono: "Images/ICONO-5.png", alt: "Inicio de la fiesta", hora: "8:00 PM", texto: "Inicio de la fiesta" },
-      { icono: "Images/ICONO-6.png", alt: "Despedida de los novios", hora: "11:00 PM", texto: "Despedida de los novios" }
+      { icono: "Images/ICONO-1.png", alt: "Discurso bíblico", hora: "3:00 p. m.", texto: "Discurso bíblico" },
+      { icono: "Images/ICONO-3.png", alt: "Recepción", hora: "5:30 p. m.", texto: "Recepción" },
+      { icono: "Images/ICONO-2.png", alt: "Bienvenida", hora: "6:00 p. m.", texto: "Bienvenida" },
+      { icono: "Images/ICONO-7.png", alt: "Palabras y buenos deseos", hora: "6:30 p. m.", texto: "Palabras y buenos deseos" },
+      { icono: "Images/ICONO-4.png", alt: "Servicio de cena", hora: "7:00 p. m.", texto: "Servicio de cena" },
+      { icono: "Images/ICONO-5.png", alt: "Inicio de la fiesta", hora: "8:00 p. m.", texto: "Inicio de la fiesta" },
+      { icono: "Images/ICONO-8.png", alt: "Partida del pastel", hora: "9:30 p. m.", texto: "Partida del pastel" },
+      { icono: "Images/ICONO-5.png", alt: "La celebración continúa", hora: "10:00 p. m.", texto: "La celebración continúa" }
     ]
   },
   dressCode: {
