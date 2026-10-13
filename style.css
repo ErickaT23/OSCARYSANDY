@@ -1986,7 +1986,7 @@ a{
     font-family: var(--title);
     transition: .22s ease;
     box-shadow: 0 4px 10px rgba(111,61,43,.05);
-    border-radius: 999px;
+    border-radius:0;
     text-align:center;
   }
   #btnOpenInvite{
