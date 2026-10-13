@@ -2159,6 +2159,21 @@ a{
   .rsvp-form select{
     border-radius:0;
   }
+  .dress-cutout-text,
+  #playlistText,
+  #albumSection .wishes-intro,
+  #rsvpCopy{
+    background:var(--rose-gold-text);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
+  #closingSubtitle{
+    background:var(--gold-highlight);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+  }
   .rsvp-form select,
   #guest-count{
     background:var(--gold-text);
