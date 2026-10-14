@@ -20,6 +20,9 @@ const config = {
       subscribe: false
     }
   },
+  zoom: {
+    guestIds: ["1"]
+  },
   admin: {
     adminKey: "twodesign123",
     keyParam: "key",

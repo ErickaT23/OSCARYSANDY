@@ -464,7 +464,7 @@ a{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    min-height:clamp(320px, 52vw, 500px);
+    min-height:600px;
     padding:20px 18px 34px;
     overflow:hidden;
     background:url("Images/textura-2.png") center/cover no-repeat;
@@ -472,7 +472,7 @@ a{
   .introduction-artwork{
     position:relative;
     width:min(100%, 560px);
-    min-height:clamp(280px, 48vw, 450px);
+    min-height:clamp(420px, 48vw, 450px);
   }
   .introduction-fragment,
   .introduction-cutout,
@@ -492,7 +492,7 @@ a{
     z-index:2;
     top:50%;
     left:55%;
-    width:min(90%, 350px);
+    width:min(105%, 350px);
     transform:translate(-63%, -50%);
   }
   .introduction-medallion{
@@ -540,14 +540,14 @@ a{
     text-align:center;
   }
   .introduction-note{
-    top:-10%;
-    left:15%;
-    width:60%;
+    top:5%;
+    left:-3%;
+    width:90%;
     transform:translateX(-50%);
     font-family:var(--cursive);
-    font-size:25px;
+    font-size:24px;
     line-height:1.05;
-    background:var(--gold-highlight);
+    background:var(--rose-gold-text);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
@@ -558,9 +558,9 @@ a{
     font-style:italic;
   }
   .introduction-copy{
-    top:30%;
-    left:14%;
-    width:60%;
+    top:24%;
+    left:2%;
+    width:80%;
     transform:translateX(-50%);
     font-family:var(--text);
     font-size:14px;
@@ -573,18 +573,18 @@ a{
   .introduction-couple{
     position:absolute;
     z-index:4;
-    top:60%;
-    left:45%;
-    width:70%;
-    padding:30px;
+    top:37%;
+    left:40%;
+    width:90%;
+    padding:37px;
     margin:0;
     transform:translateX(-50%);
     text-align:center;
     font-family:var(--cursive);
-    font-size:35px;
+    font-size:28px;
     font-weight:400;
     line-height:1;
-    background:var(--gold-highlight);
+    background:var(--rose-gold-text);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
@@ -597,6 +597,23 @@ a{
     padding:20px 18px 34px;
     background:url("Images/textura-2.png") center/cover no-repeat;
     overflow:hidden;
+  }
+  .section-separator{
+    width:100%;
+    padding:10px 0 10px 0;
+    box-sizing:border-box;
+    overflow:hidden;
+    line-height:0;
+  }
+  .section-separator img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .section-separator img[src*="F6.jpeg"]{
+    height:min(120vw, 1200px);
+    object-fit:cover;
+    object-position:center;
   }
   .introduction-secondary-artwork{
     position:relative;
@@ -700,7 +717,7 @@ a{
     display:flex;
     justify-content:center;
     align-items:flex-end;
-    min-height:clamp(360px, 60vw, 560px);
+    min-height:600px;
     padding:20px 18px 34px;
     overflow:hidden;
     background:url("Images/textura-2.png") center/cover no-repeat;
@@ -716,7 +733,7 @@ a{
   .location-main-image{
     display:block;
     position:absolute;
-    top:0;
+    top:-240px;
     right:0;
     width:min(65%, 430px);
     height:auto;
@@ -725,47 +742,89 @@ a{
   .location-horizontal-cutout{
     position:absolute;
     z-index:2;
-    left:35%;
+    left:37%;
     bottom:0;
     width:270px;
     aspect-ratio:1 / 2;
-    height:min(60%, 280px);
+    height:100%;
     object-fit:cover;
     transform:translateX(-50%);
-    top:27%;
+    top:-44%;
   }
   .location-seal{
     position:absolute;
     z-index:3;
-    top:24%;
-    right:25%;
-    width:min(15%, 110px);
+    top:-51%;
+    right:23%;
+    width:min(20%, 110px);
     height:auto;
   }
   .location-details{
     position:absolute;
     z-index:4;
-    top:32%;
-    left:35%;
-    width:250px;
+    top:-39%;
+    left:37%;
+    width:230px;
     transform:translateX(-50%);
     text-align:center;
     color:#7d2e18;
+  }
+  .zoom-section{
+    padding:28px 18px;
+    background:url("Images/textura-2.png") center/cover no-repeat;
+    text-align:center;
+    margin-top:-70px;
+  }
+  .zoom-card{
+    width:min(100%, 560px);
+    margin:0 auto;
+    padding:28px 22px;
+    background:#B8643B;
+    color:#fff;
+    box-sizing:border-box;
+  }
+  .zoom-card h3{
+    margin:0 0 10px;
+    font-family:var(--cursive);
+    font-size:32px;
+    font-weight:400;
+    text-align:center;
+    color:#ffffff !important;
+  }
+  .zoom-card p{
+    margin:0 auto 18px;
+    max-width:420px;
+    font-family:var(--text);
+    font-size:14px;
+    line-height:1.4;
+  }
+  .zoom-card a{
+    display:inline-block;
+    padding:9px 16px;
+    border:1px solid #fff;
+    color:#fff;
+    font-family:var(--text);
+    font-size:14px;
+    text-decoration:none;
+    text-transform:uppercase;
+  }
+  .location-event + .location-event{
+    margin-top:24px;
   }
   .location-details h2{
     margin:0 0 8px;
     font-family:var(--cursive);
     font-size:25px;
-    background:var(--gold-highlight);
+    background:var(--rose-gold-text);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
   }
   .location-venue{
     margin:0 0 5px;
-    font-family:var(--cursive);
-    font-size:25px;
-    background:linear-gradient(120deg, #64220d 0%, #7d2e18 28%, #963d24 52%, #7d2e18 76%, #5b1f0d 100%);
+    font-family:var(--text);
+    font-size:14px;
+    background:var(--rose-gold-text);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
@@ -774,14 +833,21 @@ a{
     margin:0 auto;
     max-width:220px;
     font-family:var(--text);
-    font-size:15px;
+    font-size:14px;
     line-height:1.25;
+    background:var(--rose-gold-text);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
   }
   .location-map-link{
     display:inline-block;
     padding:6px 10px;
     border:1px solid #a8793c;
-    color:#7d2e18;
+    background:var(--rose-gold-text);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
     font-family:var(--title);
     font-size:9px;
     text-decoration:none;
@@ -1525,7 +1591,7 @@ a{
   }
   .dress-medallion-text{
     top:30%;
-    left:33%;
+    left:34%;
     width:min(40%, 150px);
     padding:40px;
     transform:translate(-50%, -50%);
@@ -1537,9 +1603,9 @@ a{
     -webkit-text-fill-color:#ffffff;
   }
   .dress-cutout-text{
-    top:51%;
+    top:50%;
     right:-3px;
-    width:min(55%, 300px);
+    width:min(52%, 300px);
     padding:25px 35px;
     font-family:var(--text);
     font-size:12px;
@@ -2452,7 +2518,7 @@ a{
     .itinerary-editorial-note{
       width:min(100%, 235px);
       padding:16px 14px 14px;
-      margin-top:-82px;
+      margin-top:-20px;
     }
     .itinerary-editorial-note h3{
       font-size:28px;

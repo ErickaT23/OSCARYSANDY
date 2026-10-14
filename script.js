@@ -7,6 +7,15 @@ function getInvitationConfig() {
   return window.config || {};
 }
 
+function showZoomForGuest() {
+  const section = $$("#zoomSection");
+  const guestId = new URLSearchParams(window.location.search).get("id");
+  const allowedIds = getInvitationConfig()?.zoom?.guestIds || [];
+  if (section && guestId && allowedIds.map(String).includes(String(guestId))) {
+    section.hidden = false;
+  }
+}
+
 function setText(selector, value) {
   const el = typeof selector === "string" ? $$(selector) : selector;
   if (!el || value == null) return;
@@ -206,6 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 1) Pintar invitado en portada (desde loads.js)
   paintGuestCard();
+  showZoomForGuest();
 
   // 2) Botón abrir invitación
   const btnOpenInvite = $$("#btnOpenInvite");
@@ -236,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCountdown(countdownDate.year, countdownDate.month, countdownDate.day, countdownDate.hours, countdownDate.minutes, countdownDate.seconds);
 
   // 6) Separadores rotativos
-  initRotatingSep("rotatingSepImg", getInvitationConfig()?.galeria?.pareja || ["Images/FS3.jpeg", "Images/FS4.jpeg"]);
+  initRotatingSep("rotatingSepImg", ["Images/F4.jpeg", "Images/F5.jpeg"]);
   initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FS2.jpeg", "Images/FS5.jpeg"]);
 });
 
