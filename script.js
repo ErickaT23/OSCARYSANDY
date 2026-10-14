@@ -11,6 +11,7 @@ function showZoomForGuest() {
   const section = $$("#zoomSection");
   const locationSection = $$("#location");
   const itinerarySection = $$("#itinerary");
+  const rsvpSection = $$("#rsvpSection");
   const guestId = new URLSearchParams(window.location.search).get("id");
   const allowedIds = getInvitationConfig()?.zoom?.guestIds || [];
   const isRemoteGuest = Boolean(guestId && allowedIds.map(String).includes(String(guestId)));
@@ -18,6 +19,7 @@ function showZoomForGuest() {
   if (section) section.hidden = !isRemoteGuest;
   if (locationSection) locationSection.hidden = isRemoteGuest;
   if (itinerarySection) itinerarySection.hidden = isRemoteGuest;
+  if (rsvpSection) rsvpSection.hidden = isRemoteGuest;
 }
 
 function setText(selector, value) {

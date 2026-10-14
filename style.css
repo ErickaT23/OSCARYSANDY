@@ -724,7 +724,8 @@ a{
   }
   #location[hidden],
   #itinerary[hidden],
-  #zoomSection[hidden]{
+  #zoomSection[hidden],
+  #rsvpSection[hidden]{
     display:none !important;
   }
   .location-artwork{
@@ -1594,8 +1595,8 @@ a{
     text-align:center;
   }
   .dress-medallion-text{
-    top:30%;
-    left:36%;
+    top:50%;
+    left:53%;
     width:min(40%, 150px);
     padding:40px;
     transform:translate(-50%, -50%);
@@ -1618,7 +1619,7 @@ a{
   }
   @media (max-width:430px){
     .dress-medallion-text{
-      left:34%;
+      left:53%;
     }
     .introduction-copy{
       left:8%;

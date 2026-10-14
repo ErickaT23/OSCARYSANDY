@@ -51,6 +51,7 @@ const guests = [
   { id: "46", name: "Luis Castillo", passes: 1 },
   { id: "47", name: "Luis Pedro Alvarado y Daniela", passes: 2 },
   { id: "48", name: "Matrimonio Alvizures", passes: 2 },
+  { id: "49", name: "Invitado a distancia", passes: 1 },
 ];
 
 window.LocalGuestSeeds = {
@@ -110,6 +111,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const p = Number(guest.passes || 1);
       passesEl.textContent = `${p} ${p === 1 ? "pase" : "pases"}`;
     }
+
+    // Keep the invitation synchronized when the admin changes this guest.
+    const database = window.RSVPDatabase;
+    const eventId = window.config?.event?.defaultEventId || "carlosandressandy2026";
+    database?.subscribeToInvitados?.(eventId, (items) => {
+      const updatedGuest = items.find((item) => String(item.id) === String(guestId));
+      if (!updatedGuest || updatedGuest.activo === false) return;
+      window.currentGuest = {
+        id: String(updatedGuest.id),
+        name: updatedGuest.nombre,
+        passes: Number(updatedGuest.pases || 1),
+      };
+      window.dispatchEvent(new Event("guest:updated"));
+    }, console.error);
   } else {
     window.currentGuest = null;
 
