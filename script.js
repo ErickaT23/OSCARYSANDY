@@ -260,11 +260,21 @@ function paintGuestCard() {
   const nameEl = $$("#guestCardName");
   const seatsEl = $$("#guestCardSeats");
   const seatsTxtEl = $$("#guestCardSeatsTxt");
+  const subEl = $$("#guestCardSub");
+  const seatsLineEl = $$("#guestCardSeatsLine");
+  const distanceEl = $$("#guestCardDistance");
 
   // Si no existen (por si aún no pegaste el HTML), no rompe
   if (!nameEl || !seatsEl) return;
 
   const g = window.currentGuest;
+  const guestId = new URLSearchParams(window.location.search).get("id");
+  const remoteIds = getInvitationConfig()?.zoom?.guestIds || [];
+  const isRemoteGuest = remoteIds.map(String).includes(String(guestId));
+
+  if (subEl) subEl.hidden = isRemoteGuest;
+  if (seatsLineEl) seatsLineEl.hidden = isRemoteGuest;
+  if (distanceEl) distanceEl.hidden = !isRemoteGuest;
 
   if (g && g.name) {
     nameEl.textContent = g.name;
