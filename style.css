@@ -44,7 +44,7 @@
   .album-card{
     position:relative;
     overflow:hidden;
-    width:100%;
+    width:min(40%, 100px);
     padding:30px 18px;
     background:url("Images/RECORTE.png") center/cover no-repeat !important;
   }
@@ -1583,7 +1583,7 @@ a{
     z-index:2;
     top:50%;
     left:53%;
-    width:min(40%, 160px);
+    width:100%;
     height:auto;
     transform:translate(-50%, -50%);
   }
