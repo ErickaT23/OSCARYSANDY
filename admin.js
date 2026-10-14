@@ -41,10 +41,12 @@
     const confirmMap = new Map();
     state.confirmaciones.forEach((item) => {
       if (!item?.id) return;
+      if (String(item.id).toLowerCase().startsWith("demo")) return;
       confirmMap.set(String(item.id), item);
     });
 
     return state.invitados
+      .filter((guest) => !String(guest.id).toLowerCase().startsWith("demo"))
       .map((guest) => {
         const confirmation = confirmMap.get(String(guest.id));
         return {

@@ -55,6 +55,7 @@
     const invitedMap = new Map();
     state.invitados.forEach((item) => {
       if (!item || item.activo === false) return;
+      if (String(item.id).toLowerCase().startsWith("demo")) return;
       invitedMap.set(String(item.id), {
         id: String(item.id),
         nombre: String(item.nombre || "Invitado").trim() || "Invitado",
@@ -69,6 +70,7 @@
       if (!item) return;
       const id = String(item.id || "").trim();
       if (!id) return;
+      if (id.toLowerCase().startsWith("demo")) return;
 
       const base = invitedMap.get(id) || {
         id,

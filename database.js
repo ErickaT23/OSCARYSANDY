@@ -101,7 +101,10 @@ async function migrateLocalGuestsToFirebase(eventId, options = {}) {
     }
   }
 
-  const seeds = window.LocalGuestSeeds?.[safeEventId] || {};
+  const seeds = Object.fromEntries(
+    Object.entries(window.LocalGuestSeeds?.[safeEventId] || {})
+      .filter(([id]) => !id.toLowerCase().startsWith("demo"))
+  );
   await set(invitadosRef, seeds);
   return { ok: true, skipped: false, total: Object.keys(seeds).length };
 }

@@ -21,7 +21,7 @@ const config = {
     }
   },
   zoom: {
-    guestIds: ["1"]
+    guestIds: ["demo1"]
   },
   admin: {
     adminKey: "twodesign123",
