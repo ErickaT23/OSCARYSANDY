@@ -105,7 +105,7 @@ const config = {
   },
   regalo: {
     titulo: "Regalo",
-    descripcion: "Nuestra mayor alegría es compartir este día contigo. Si deseas tener un detalle con nosotros, agradeceremos con mucho cariño tu obsequio en efectivo dentro de nuestra lluvia de sobres.",
+    descripcion: "Nuestra mayor alegría es compartir este día contigo. Si deseas tener un detalle con nosotros, agradeceremos con mucho cariño tu obsequio en efectivo dentro de nuestra lluvia de sobres. Cualquier detalle de otro tipo o por otro medio también será recibido con mucho aprecio.",
     transferencia: {
       titular: "",
       medio: "",
