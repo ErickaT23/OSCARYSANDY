@@ -9,11 +9,15 @@ function getInvitationConfig() {
 
 function showZoomForGuest() {
   const section = $$("#zoomSection");
+  const locationSection = $$("#location");
+  const itinerarySection = $$("#itinerary");
   const guestId = new URLSearchParams(window.location.search).get("id");
   const allowedIds = getInvitationConfig()?.zoom?.guestIds || [];
-  if (section && guestId && allowedIds.map(String).includes(String(guestId))) {
-    section.hidden = false;
-  }
+  const isRemoteGuest = Boolean(guestId && allowedIds.map(String).includes(String(guestId)));
+
+  if (section) section.hidden = !isRemoteGuest;
+  if (locationSection) locationSection.hidden = isRemoteGuest;
+  if (itinerarySection) itinerarySection.hidden = isRemoteGuest;
 }
 
 function setText(selector, value) {
@@ -246,7 +250,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initCountdown(countdownDate.year, countdownDate.month, countdownDate.day, countdownDate.hours, countdownDate.minutes, countdownDate.seconds);
 
   // 6) Separadores rotativos
-  initRotatingSep("rotatingSepImg", ["Images/F4.jpeg", "Images/F5.jpeg"]);
   initRotatingSep("celebrationSepImg", getInvitationConfig()?.galeria?.celebracion || ["Images/FS2.jpeg", "Images/FS5.jpeg"]);
 });
 
