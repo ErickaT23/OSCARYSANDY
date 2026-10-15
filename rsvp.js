@@ -242,6 +242,10 @@ document.addEventListener("DOMContentLoaded", () => {
       : 0;
 
     btnSubmit.disabled = true;
+    const okMessage = respuesta === "SI"
+      ? "Gracias por confirmar tu asistencia. Será un privilegio compartir este día contigo."
+      : "Lamentamos que no puedas acompañarnos en esta ocasión y agradecemos de corazón tu respuesta.";
+    markConfirmedUI(okMessage);
 
     try {
       const res = await apiSend({
@@ -253,18 +257,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (res && (res.ok === true || res.success === true)) {
         await saveConfirmationToFirebase(invitado, respuesta, pasesSeleccionados);
-        const okMessage = respuesta === "SI"
-          ? "Gracias por confirmar tu asistencia. Será un privilegio compartir este día contigo."
-          : "Lamentamos que no puedas acompañarnos en esta ocasión y agradecemos de corazón tu respuesta.";
-        markConfirmedUI(okMessage);
         return;
       }
 
       console.warn("Respuesta del endpoint:", res);
+      resetConfirmUI();
+      toggleGuestCount();
       btnSubmit.disabled = false;
       showMsg(msg, "No se pudo guardar tu respuesta. Intenta de nuevo.", "error");
     } catch (error) {
       console.error("apiSend:", error);
+      resetConfirmUI();
+      toggleGuestCount();
       btnSubmit.disabled = false;
       showMsg(msg, "Error de conexión al enviar tu respuesta.", "error");
     }
