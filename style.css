@@ -574,8 +574,8 @@ a{
     position:absolute;
     z-index:4;
     top:37%;
-    left:43%;
-    width:90%;
+    left:44%;
+    width:80%;
     padding:37px;
     margin:0;
     transform:translateX(-50%);
@@ -1625,7 +1625,7 @@ a{
       left:8%;
     }
     .introduction-couple{
-      left:42%;
+      left:44%;
     }
   }
   .itinerary-editorial + .dress-editorial{
