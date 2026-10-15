@@ -48,9 +48,9 @@ const config = {
   ceremonia: {
     mensaje: "Uniremos nuestra vida en matrimonio con la bendición de Dios y de nuestros amados padres.",
     padresNoviaTitulo: "Padres de la Novia",
-    padresNovia: "Edgar Giovanni Pérez & Sandra de Pérez",
+     padresNovia: "Giovanni Pérez & Sandra de Pérez",
     padresNovioTitulo: "Padres del Novio",
-    padresNovio: "José Andrés Lorenzana Argueta y Patricia Osorio"
+     padresNovio: "José Andrés Lorenzana y Patricia Osorio"
   },
   musica: {
     titulo: "Nuestra Canción",
