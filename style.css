@@ -2131,7 +2131,9 @@ a{
   }
   
   .rsvp-msg.ok{
-    color: var(--olive-dark);
+    background: url("Images/textura-2.png") center / cover;
+    border: 1px solid #B8643B;
+    color: #B8643B;
   }
   
   .rsvp-msg.error{
@@ -2380,10 +2382,10 @@ a{
     color:#fff;
   }
   .rsvp-msg.ok{
-    background:rgba(194,117,82,.12);
-    border:1px solid rgba(111,61,43,.16);
-    color:var(--olive-dark);
-  }
+     background: url("Images/textura-2.png") center / cover;
+     border: 1px solid #B8643B;
+     color: #B8643B;
+   }
   .dress .event-icon{
     width: 180px;
     height: auto;

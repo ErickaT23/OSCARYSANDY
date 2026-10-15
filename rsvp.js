@@ -113,6 +113,9 @@ function markConfirmedUI(message) {
   const msg = $("#msgRsvp");
 
   if (form) form.classList.add("is-confirmed");
+  form?.querySelectorAll(".form-group:not(:first-child), #btnConfirmarRsvp").forEach((el) => {
+    el.style.display = "none";
+  });
   document.querySelectorAll('#rsvp-form input, #rsvp-form select, #rsvp-form button').forEach((el) => {
     if (!el.hasAttribute("readonly")) el.disabled = true;
   });
