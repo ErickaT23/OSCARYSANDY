@@ -209,15 +209,17 @@ document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     if (!invitado) return;
     try {
-      const ya = await apiCheck(getRemoteGuestId(invitado.id));
-      if (ya) {
+      const confirmation = await window.RSVPDatabase?.getConfirmationByGuestId?.(getEventId(), invitado.id);
+      if (confirmation) {
         markConfirmedUI();
       } else {
         resetConfirmUI();
+        toggleGuestCount();
       }
     } catch (error) {
-      console.warn("apiCheck inicial falló:", error);
+      console.warn("Comprobación inicial de Firebase falló:", error);
       resetConfirmUI();
+      toggleGuestCount();
     }
   })();
 
