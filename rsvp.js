@@ -192,6 +192,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const show = radioYes.checked;
     guestCountWrapper.style.display = show ? "grid" : "none";
     guestCount.disabled = !show;
+    const ready = radioNo.checked || (radioYes.checked && Boolean(guestCount.value));
+    btnSubmit.style.display = ready ? "block" : "none";
+    btnSubmit.disabled = !ready;
   }
 
   paintGuestData();
@@ -201,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("guest:updated", paintGuestData);
   radioYes.addEventListener("change", toggleGuestCount);
   radioNo.addEventListener("change", toggleGuestCount);
+  guestCount.addEventListener("change", toggleGuestCount);
 
   (async () => {
     if (!invitado) return;

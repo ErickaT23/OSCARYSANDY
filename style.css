@@ -2360,8 +2360,19 @@ a{
     background-size:220% auto;
     border-color:rgba(153,121,80,.28);
     color:#FFFFFF;
-    box-shadow:0 10px 22px rgba(153,121,80,.18);
-  }
+     box-shadow:0 10px 22px rgba(153,121,80,.18);
+   }
+   .rsvp #btnConfirmarRsvp{
+     background:#B8643B !important;
+     border-color:#B8643B !important;
+     color:#FFFFFF !important;
+   }
+   .rsvp #btnConfirmarRsvp:hover,
+   .rsvp #btnConfirmarRsvp:active{
+     background:#B8643B !important;
+     border-color:#B8643B !important;
+     color:#FFFFFF !important;
+   }
   .album .event-icon,
   .wishes .event-icon{
     margin:0 auto 8px;
