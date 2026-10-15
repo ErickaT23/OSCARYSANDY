@@ -190,7 +190,7 @@ function renderInvitationContent() {
   setText("#closingCouple", pareja.nombres || "Nuestra celebración");
   setLink("#footerFacebook", cfg.footer?.facebookUrl);
   setLink("#footerInstagram", cfg.footer?.instagramUrl);
-  setImage("#heroMainImage", galeria.portadaPrincipal || "Images/E2.png", pareja.nombres || "Invitación");
+  setImage("#heroMainImage", galeria.portadaPrincipal || "Images/E2.png?v=20261015-1", pareja.nombres || "Invitación");
   setImage("#celebrationSepImg", galeria.celebracion?.[0] || "Images/FS2.jpeg", "Galería de celebración");
   setImage("#rotatingSepImg", galeria.pareja?.[0] || "Images/FS3.jpeg", "Foto pareja");
 

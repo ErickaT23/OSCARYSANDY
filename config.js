@@ -132,7 +132,7 @@ const config = {
     mensaje: "Para nosotros es muy importante que confirmes tu asistencia lo antes posible, o bien indicarnos si no podrás acompañarnos."
   },
   galeria: {
-    portadaPrincipal: "Images/E2.png",
+    portadaPrincipal: "Images/E2.png?v=20261015-1",
     historia: ["Images/FS1.jpeg"],
     celebracion: ["Images/FS2.jpeg", "Images/FS5.jpeg"],
     pareja: ["Images/FS3.jpeg", "Images/FS4.jpeg"]
