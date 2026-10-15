@@ -257,16 +257,11 @@ document.addEventListener("DOMContentLoaded", () => {
         respuesta,
       });
 
-      if (res && (res.ok === true || res.success === true)) {
-        await saveConfirmationToFirebase(invitado, respuesta, pasesSeleccionados);
-        return;
+      if (!(res && (res.ok === true || res.success === true))) {
+        console.warn("El endpoint externo respondió, pero Firebase será la fuente principal:", res);
       }
-
-      console.warn("Respuesta del endpoint:", res);
-      resetConfirmUI();
-      toggleGuestCount();
-      btnSubmit.disabled = false;
-      showMsg(msg, "No se pudo guardar tu respuesta. Intenta de nuevo.", "error");
+      await saveConfirmationToFirebase(invitado, respuesta, pasesSeleccionados);
+      return;
     } catch (error) {
       console.error("apiSend:", error);
       resetConfirmUI();
