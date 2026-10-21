@@ -464,8 +464,7 @@ a{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    min-height:600px;
-    padding:20px 18px 34px;
+    padding:10px 18px 10px;
     overflow:hidden;
     background:url("Images/textura-2.png") center/cover no-repeat;
   }
@@ -484,14 +483,14 @@ a{
   .introduction-fragment{
     z-index:1;
     top:67%;
-    left:68%;
+     left:73%;
     width:min(50%, 430px);
     transform:translate(-38%, -50%);
   }
   .introduction-cutout{
     z-index:2;
     top:50%;
-    left:55%;
+     left:62%;
     width:min(105%, 350px);
     transform:translate(-63%, -50%);
   }
@@ -504,8 +503,8 @@ a{
   .introduction-medallion-link{
     position:absolute;
     z-index:3;
-    top:78%;
-    left:81%;
+     top:43%;
+     left:87%;
     display:block;
     width:min(100%, 150px);
     color:inherit;
@@ -541,8 +540,8 @@ a{
   }
   .introduction-note{
     top:5%;
-    left:-3%;
-    width:90%;
+     left:0%;
+     width:102%;
     transform:translateX(-50%);
     font-family:var(--cursive);
     font-size:24px;
@@ -559,7 +558,7 @@ a{
   }
   .introduction-copy{
     top:24%;
-    left:10%;
+     left:16%;
     width:70%;
     transform:translateX(-50%);
     font-family:var(--text);
@@ -574,7 +573,7 @@ a{
     position:absolute;
     z-index:4;
     top:37%;
-    left:44%;
+     left:53%;
     width:80%;
     padding:37px;
     margin:0;
@@ -628,8 +627,8 @@ a{
   .introduction-secondary-tp{
     position:absolute;
     z-index:3;
-    left:-11px;
-    top:52%;
+     left:9px;
+     top:58%;
     width:min(100%, 120px);
     height:auto;
     transform:translateY(-50%) rotate(70deg) scaleX(-1);
@@ -1622,10 +1621,10 @@ a{
       left:53%;
     }
     .introduction-copy{
-      left:8%;
+      left:14%;
     }
     .introduction-couple{
-      left:44%;
+      left:50%;
     }
   }
   .itinerary-editorial + .dress-editorial{
