@@ -120,7 +120,7 @@ const config = {
   },
   deseos: {
     titulo: "Buenos deseos",
-    intro: "Déjanos un mensaje especia para los novios, en este día tan especial."
+    intro: "Déjanos un mensaje especial para los novios, en este día tan especial."
   },
   adultos: {
     titulo: "Solo adultos",
