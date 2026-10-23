@@ -52,6 +52,8 @@ const guests = [
   { id: "47", name: "Luis Pedro Alvarado y Daniela", passes: 2 },
   { id: "48", name: "Matrimonio Alvizures", passes: 2 },
   { id: "49", name: "Invitado a distancia", passes: 1 },
+  { id: "50", name: "Matrimonio Perez", passes: 2 },
+  { id: "51", name: "Rosa Hurtado", passes: 1 },
 ];
 
 window.LocalGuestSeeds = {
