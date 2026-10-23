@@ -94,11 +94,9 @@ async function migrateLocalGuestsToFirebase(eventId, options = {}) {
   const safeEventId = resolveEventId(eventId);
   const invitadosRef = ref(db, getEventInvitadosPath(safeEventId));
 
-  if (!options.force) {
-    const snapshot = await get(invitadosRef);
-    if (snapshot.exists()) {
-      return { ok: true, skipped: true, total: Object.keys(snapshot.val() || {}).length };
-    }
+  const snapshot = await get(invitadosRef);
+  if (snapshot.exists()) {
+    return { ok: true, skipped: true, total: Object.keys(snapshot.val() || {}).length };
   }
 
   const seeds = Object.fromEntries(
